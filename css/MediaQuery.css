@@ -1,0 +1,46 @@
+.container > * {
+    border: 4px solid black;
+    margin: 0.2rem;
+    padding: 1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.5fr 5fr;
+    grid-template-areas:
+      "header  header"
+      "sidebar sidebar"
+      "main main";
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer footer";
+    }
+  }
+  
+  header {
+    grid-area: header;
+    background: lightpink;
+  }
+  
+  aside {
+    grid-area: sidebar;
+    background: lightblue;
+  }
+  
+  main {
+    grid-area: main;
+    background: tomato;
+  }
+
+  footer {
+    grid-area: footer;
+    background: lightgreen;
+  }
+  
+  
+  
